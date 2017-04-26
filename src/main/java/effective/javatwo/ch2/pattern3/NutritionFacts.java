@@ -31,23 +31,27 @@ public class NutritionFacts {
         public Builder calories(int val){
             System.out.println("test2");
             calories = val;
+            System.out.println("calories : " + this.toString());
             return this;
         }
 
         public Builder fat(int val){
             fat = val;
+            System.out.println("fat : " + this.toString());
             return this;
         }
 
         public Builder carbohydrate(int val){
             System.out.println("test4");
             carbohydrate = val;
+            System.out.println("carbohydrate : " + this.toString());
             return this;
         }
 
         public Builder sodium(int val){
             System.out.println("test3");
             sodium = val;
+            System.out.println("sodium : " + this.toString());
             return this;
         }
 
@@ -56,6 +60,17 @@ public class NutritionFacts {
             return new NutritionFacts(this);
         }
 
+        @Override
+        public String toString() {
+            return "Builder{" +
+                    "servingSize=" + servingSize +
+                    ", servings=" + servings +
+                    ", calories=" + calories +
+                    ", fat=" + fat +
+                    ", carbohydrate=" + carbohydrate +
+                    ", sodium=" + sodium +
+                    '}';
+        }
     }
 
     private NutritionFacts(Builder builder){
